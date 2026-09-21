@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Songs for you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Helvetica+Neue:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="stage">
+  <div class="window">
+
+    <div class="window-dots">
+      <span class="dot dot-red"></span>
+      <span class="dot dot-amber"></span>
+      <span class="dot dot-green"></span>
+    </div>
+
+    <div class="window-body">
+
+      <header class="header-pill">
+        <div class="header-left">
+          <div class="header-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20">
+              <circle cx="6" cy="14" r="3.2" fill="none" stroke="#c8e6d0" stroke-width="1.6"></circle>
+              <circle cx="15" cy="12" r="3.2" fill="none" stroke="#c8e6d0" stroke-width="1.6"></circle>
+              <path d="M9.2 14 L17.2 11 L17.2 5 L9.2 8 Z" fill="none" stroke="#c8e6d0" stroke-width="1.4"></path>
+            </svg>
+          </div>
+          <div class="page-label" id="pageLabel">Pagina 1</div>
+        </div>
+        <div class="header-right">Albita bonita</div>
+      </header>
+
+      <main class="card">
+        <div class="sticker" id="sticker">PARA TI</div>
+
+        <!-- LEFT COLUMN -->
+        <div class="col-left">
+
+          <div>
+            <h1 class="hero-title" id="heroTitle">Un pequeño regalo<br>para ti</h1>
+            <p class="hero-subtitle" id="heroSubtitle">espero te guste aun que sea digital...</p>
+          </div>
+
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span id="statusText">Rst-1</span>
+          </div>
+
+          <!-- Envelope step body -->
+          <div class="info-card step-body" data-step="envelope">
+            <strong class="info-card-title">1ramente</strong>
+            <p>Quisiera decir que espero te encuentres bien, recordarte lo mucho que te quiero y lo importante que eres para mí.</p>
+            <p>Que no te rindas, porque a pesar de las cosas que pasen sean malas o buenas, yo estoy aquí, tq mi morenita preciosa.</p>
+          </div>
+
+          <!-- Bloom step body -->
+          <div class="info-card step-body" data-step="bloom" hidden>
+            <div class="info-card-heading">Explicacion</div>
+            <p>Tenía planeado darte mas que esto, pero debido a contratiempos con la persona que estaba arreglando todo, no se pudo, me quedo mal, así que decidí entregarte "algo" a no darte nada, porque significas mucho para mí como para venir y no darte algo, tengo planeado aun así darte tú detallito no de la misma manera a como lo tenia planeado para hoy, pero lo hare.</p>
+          </div>
+
+          <!-- Tracklist step body -->
+          <div class="step-body" data-step="tracklist" hidden>
+            <div class="tracklist">
+              <div class="track-row" id="trackRow" role="button" tabindex="0">
+                <div class="track-index">01</div>
+                <div class="track-meta">
+                  <div class="track-title">A Dios Le Pido</div>
+                  <div class="track-artist">Juanes</div>
+                </div>
+                <div class="track-duration">3:30</div>
+              </div>
+              <button class="btn btn-outline" id="copyLinkBtn">Copiar link</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-right">
+          <div class="media-card">
+
+            <div class="media-frame step-body" data-step="envelope">
+              <img src="assets/snoopy-tree.png" alt="Snoopy y Woodstock bajo un árbol">
+            </div>
+            <div class="media-frame step-body" data-step="bloom" hidden>
+              <img src="assets/snoopy-scream.jpg" alt="Snoopy versión El Grito" class="obj-bottom">
+            </div>
+            <div class="media-frame step-body" data-step="tracklist" hidden>
+              <img src="assets/snoopy-sunflower.jpg" alt="Snoopy con flores" id="galleryImg">
+            </div>
+
+            <div class="step-body caption" data-step="envelope">Te quiero mucho</div>
+
+            <div class="media-actions step-body" data-step="envelope">
+              <button class="btn btn-primary" id="toBloomBtn">Siguiente</button>
+            </div>
+            <div class="media-actions step-body" data-step="bloom" hidden>
+              <button class="btn btn-primary" id="toTracklistBtn">Siguiente</button>
+            </div>
+            <div class="media-actions step-body" data-step="tracklist" hidden>
+              <button class="btn btn-outline" id="backBtn">Regresar</button>
+              <button class="btn btn-primary" id="galleryBtn">1/2</button>
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+      <nav class="bottom-nav">
+        <button class="nav-btn" data-nav="envelope">01</button>
+        <button class="nav-btn" data-nav="bloom">02</button>
+        <button class="nav-btn" data-nav="tracklist">03</button>
+      </nav>
+
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">Link copiado</div>
+
+<script src="script.js"></script>
+</body>
+</html>
